@@ -1,0 +1,103 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="meme-maker">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      figure {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        font-size: 20px;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      .top-text,
+      .bottom-text {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: 3% 2%;
+
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-family: "Impact", "Arial Black", "sans serif";
+        line-height: 1.2;
+
+        font-size: 20px;
+        font-size: [[fontSize]];
+
+        color: white;
+        text-shadow:
+          -1px -1px 0 #000,  
+          1px -1px 0 #000,
+          -1px 1px 0 #000,
+          1px 1px 0 #000;
+        letter-spacing: 2px;
+      }
+
+      .top-text { top: 0; }
+      .bottom-text { bottom: 0; }
+
+      @media (max-width: 600px) {
+
+        .top-text,
+        .bottom-text {
+          font-size: calc([[fontSize]] - ([[fontSize]] / 4));
+        }
+
+      }
+    </style>
+    
+    <figure>
+      <img src="[[imageUrl]]" alt="[[topText]] [[bottomText]]">
+      <figcaption class="top-text">[[topText]]</figcaption>
+      <figcaption class="bottom-text">[[bottomText]]</figcaption>
+    </figure>
+  </template>
+
+  <script>
+    /**
+     * `meme-maker`
+     * 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class MemeMaker extends Polymer.Element {
+      static get is() { return 'meme-maker'; }
+      static get properties() {
+        return {
+          imageUrl: {
+            type: String
+          },
+          topText: {
+            type: String
+          },
+          bottomText: {
+            type: String
+          },
+          fontSize: {
+            type: String
+          }
+        };
+      }
+    }
+
+    window.customElements.define(MemeMaker.is, MemeMaker);
+  </script>
+</dom-module>
