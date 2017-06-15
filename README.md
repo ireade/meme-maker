@@ -1,5 +1,27 @@
 # \<meme-maker\>
 
+A Polymer element to easily make memes.
+
+
+## Demo
+
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="meme-maker.html">
+    <next-code-block></next-code-block>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<meme-maker image-url="http://res.cloudinary.com/big-cabal/image/upload/w_700,f_auto,fl_lossy,q_auto/v1484916770/sense_jilgk7.png"
+            top-text="You can't fail your tests"
+            bottom-text="If you don't write any"
+            font-size="28px"></meme-maker>
+```
+
 
 
 ## Install the Polymer-CLI
