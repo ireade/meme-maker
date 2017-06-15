@@ -11,5 +11,18 @@
   },
   "resolutions": {
     "polymer": "^2.0.0"
+  },
+  "license": "MIT",
+  "author": [
+    "Ire Aderinokun <iaderinokun@gmail.com>"
+  ],
+  "keywords": [
+    "web-components",
+    "polymer",
+    "meme"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ireade/meme-maker"
   }
 }
