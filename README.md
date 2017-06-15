@@ -5,6 +5,8 @@ A Polymer element to easily make memes.
 
 ## Demo
 
+![result](https://user-images.githubusercontent.com/8677283/27186312-d4976686-51df-11e7-8da0-eea6cc9500cf.png)
+
 <!--
 ```
 <custom-element-demo>
